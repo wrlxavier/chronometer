@@ -1,0 +1,203 @@
+/* 
+    USED FONTS:
+
+    font-family: 'Quantico', sans-serif;
+    font-family: 'Russo One', sans-serif;
+
+*/
+
+/* - - - - - - - GLOBAL STYLE- - - - - - - */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, #80d8ff,  #ccff90);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quantico', sans-serif;
+    color: #424242;
+}
+
+/* - - - - - - - DESKTOP STYLE- - - - - - - */
+
+@media only screen and (min-width: 768px){
+
+    .flex-box, .flex-box p {
+        display: flex;
+        align-items: center;
+    }
+
+    .chronometer {
+        flex-direction: column;
+        justify-content: space-around;
+        width: 850px;
+        height: 400px;
+    }
+
+    .chronoContainer {
+        justify-content: space-between;
+        width: 750px;
+        height: 200px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .chronoIMG {
+        justify-content: center;
+        width: 200px;
+        height: 100%;
+    }
+
+    .chronoIMG img {
+        height: 60%;
+    }
+
+    .chronoDisplay {
+        flex-direction: column;
+        justify-content: space-around;
+        width: 300px;
+        height: 100%;
+    }
+
+    .chronoDisplay p {
+        justify-content: center;
+        font-size: 40px;
+    }
+
+    #title {
+        font-family: 'Russo One', sans-serif;
+    }
+
+    #mainDisplay {
+        font-size: 50px;
+    }
+
+    .chronoButton {
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 200px;
+        height: 100%;
+    }
+
+    .chronoButton input {
+        transition: 0.2s;
+        -webkit-transition: 0.2s;
+        -moz-transition: 0.2s;
+        font-family: 'Quantico', sans-serif;
+        text-transform: uppercase;
+        width: 80%;
+        height: 50px;
+
+        border: none;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .chronoButton input:hover {
+        transition: 0.2s;
+        -webkit-transition: 0.2s;
+        -moz-transition: 0.2s;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: whitesmoke;
+    }
+
+    .chronoButton input:active {
+        transition: 0.2s;
+        -webkit-transition: 0.2s;
+        -moz-transition: 0.2s;
+        background-color: whitesmoke;
+        color: black;
+    }
+
+    @media only screen and (max-width: 850px){
+        .chronometer, .chronoContainer {
+            width: 95%;
+        }
+    }
+}
+
+/* - - - - - - - MOBILE STYLE- - - - - - - */
+
+@media only screen and (max-width: 767px){
+    .chronometer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .chronoContainer, .chronoList {
+        width: 100vw;
+    }
+
+    .chronoIMG {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 100px 100px 0 0;
+    }
+
+    .chronoIMG img {
+        height: 80%;
+    }
+
+    .chronoDisplay {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 200px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .chronoDisplay h1 {
+        font-size: 2em;
+    }
+
+    #mainDisplay {
+        font-size: 3em;
+    }
+
+    .chronoButton {
+        flex-direction: column;
+        height: 300px;
+        margin-bottom: 50px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .chronoButton input {
+        outline: none;
+        transition: 0.2s;
+        -webkit-transition: 0.2s;
+        -moz-transition: 0.2s;
+
+        width: 100%;
+        height: 100px;
+        border: none;
+
+        background-color: rgba(255, 255, 255, 0.4);
+        font-family: 'Quantico', sans-serif;
+        text-transform: uppercase;
+    }
+
+    .chronoButton input:active {
+        transition: 0.2s;
+        -webkit-transition: 0.2s;
+        -moz-transition: 0.2s;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: whitesmoke;
+    }
+
+    @media only screen and (max-height: 700px){
+        body {
+            height: 700px;
+        }
+    }
+}
